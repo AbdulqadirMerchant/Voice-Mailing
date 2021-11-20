@@ -1,9 +1,6 @@
 import yagmail
 import speech_recognition as sr
 import pyttsx3
-from time import sleep
-
-sleep(6)
 
 engine = pyttsx3.init()
 

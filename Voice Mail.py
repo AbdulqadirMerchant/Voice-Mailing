@@ -4,7 +4,7 @@ import pyttsx3
 
 engine = pyttsx3.init()
 
-
+#mail_to = input('Please enter the person to whom you want to mail this:')
 def record_voice():
     try:
         recording = sr.Recognizer()
@@ -22,6 +22,7 @@ def record_voice():
 
 mail = yagmail.SMTP(user = "<Your Mail ID>", password = "<Mail Password>")
 message = record_voice()
+#You can add the mail_to variable in the "to" parameter
 mail.send(to = "<Receiver Mail ID>", subject = "Voice mail using python", contents = message)
 engine.say("Mail has been sent successfully!")
 engine.runAndWait()
